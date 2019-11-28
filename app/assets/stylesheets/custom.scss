@@ -1,0 +1,49 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* universal */
+header{
+  height: 75px;
+  width: 100%;
+
+
+  p {
+    font-size: 30px;
+    height: 10px;
+    margin:0 auto;
+    padding-top: 20px;
+    padding-left: 10px;
+    color: #888888;
+  }
+
+}
+.top_page_wrapper{
+  height: 100px;
+  width:100%;
+
+    h1{
+      font-size: 180px;
+      padding: 100px 300px 0 300px;
+      color: #FFCCFF;
+      opacity: 0.9;
+      font-family: cursive;
+      animation: appeare 1s ease 3s 1 normal forwards running;
+    }
+
+    @keyframes appeare {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    h2{
+      font-size: 30px;
+      padding: 0 300px 0 500px;
+      color: #FFCCFF;
+      opacity: 0.8;
+      font-family: cursive;
+      }
+}
