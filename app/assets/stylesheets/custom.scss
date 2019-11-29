@@ -23,27 +23,26 @@ header{
   width:100%;
 
     h1{
-      font-size: 180px;
+      font-size: 220px;
       padding: 100px 300px 0 300px;
       color: #FFCCFF;
+      background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       opacity: 0.9;
       font-family: cursive;
       animation: appeare 1s ease 3s 1 normal forwards running;
     }
 
-    @keyframes appeare {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+
     h2{
-      font-size: 30px;
+      font-size: 35px;
       padding: 0 300px 0 500px;
       color: #FFCCFF;
-      opacity: 0.8;
+      background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
       font-family: cursive;
       }
 }
