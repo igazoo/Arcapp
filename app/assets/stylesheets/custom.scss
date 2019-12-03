@@ -4,27 +4,51 @@
 
 /* universal */
 header{
-  height: 75px;
+  height: 70px;
   width: 100%;
 
+  .container{
+    margin-left: 30px;
 
   p {
-    font-size: 30px;
+    font-size: 40px;
     height: 10px;
     margin:0 auto;
     padding-top: 20px;
-    padding-left: 10px;
-    color: #888888;
+    color: #000;
+
+
   }
+ nav{
+   font-size: 25px;
+   font-family: cursive;
+ }
+ }
+}
+body.index{
+  background-image: url('syabobo.jpeg');
+  background-size: cover;
+  animation: bgiLoop 90s linear infinite ;
+}
+@keyframes bgiLoop {
+    0% { background-position: 0 0;}
+  100% { background-position: -3000px 5000px;}
 
 }
-.top_page_wrapper{
-  height: 100px;
+.top-page-wrapper{
+  height: 700px;
   width:100%;
 
+
+}
+
+
+
+
+.top-mask{
     h1{
       font-size: 220px;
-      padding: 100px 300px 0 300px;
+      padding: 100px 300px 0 400px;
       color: #FFCCFF;
       background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
         -webkit-background-clip: text;
@@ -37,7 +61,7 @@ header{
 
     h2{
       font-size: 35px;
-      padding: 0 300px 0 500px;
+      padding: 0 300px 0 700px;
       color: #FFCCFF;
       background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
         -webkit-background-clip: text;
@@ -45,4 +69,72 @@ header{
 
       font-family: cursive;
       }
+
+
+
+}
+h3{
+  text-align: center;
+  font-family: cursive;
+  font-size: 150px;
+  padding-top: 70px;
+  margin: 0 auto;
+  color: #FFCCFF;
+  background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.one {
+  position: relative;
+  top: 150px;
+  left: 180px;
+  width: 600px;
+  font-size: 25px;
+  border-radius: 200px 250px 300px 400px;
+  padding-top:50px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  padding-right:150px;
+
+}
+.one:hover{
+    background: linear-gradient(-435deg, #FFAAFF, #FFFF99,#fff) fixed;
+}
+
+.two{
+  position: relative;
+  top: 100px;
+  left:600px;
+  width:600px;
+  font-size:25px;
+  font-size: 25px;
+  border-radius: 300px 200px 200px 400px;
+  padding-top:50px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  padding-right:150px;
+
+}
+.two:hover{
+    background: linear-gradient(-435deg, #FFAAFF, #FFFF99,#fff) fixed;
+}
+
+.midle-wrapper{
+  height:1000px;
+  text-align:center;
+}
+.midle-container{
+  p{
+    font-size: 20px;
+    margin-top: 50px;
+
+  }
+}
+
+h4{
+  font-size:80px;
+  font-family: cursive;
+  margin-bottom: 200px;
+
 }

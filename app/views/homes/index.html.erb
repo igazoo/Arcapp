@@ -1,14 +1,48 @@
-<div class = "top_page_wrapper">
-	<div class = "top_container">
-		<div class= "home_message">
-			<h1>Arc+</h1>
-	  	<h2>未来への架け橋になる</h2>
+<body class="index">
+	<header >
+		<div class="container">
+			<p>Arc+</p>
+			<nav>
+				<ul id = "access" class="nav navbar-nav navbar-right">
+					<li><%= link_to "Home",  root_path %></li>
+					<li><%= link_to "Vision",   homes_about_path %></li>
+					<li><%= link_to "Event" , events_index_path %></li>
+					<li><%= link_to "Sign_up",  new_user_path %></li>
+					<li><%= link_to "Log in", '#' %></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div class = "top-page-wrapper">
+		<div class = "top-container">
+			<div class= "top-mask">
+
+				<h1>Arc+</h1>
+				<h2>夢中への架け橋になる<h2>
+			</div>
 		</div>
 	</div>
-</div>
 
-<script type="text/javascript">
-	$(function() {
-		$('div').hide().fadeIn(6500);
-});
-</script>
+	<div class="midle-wrapper">
+		<div class="midle-container">
+
+			<h4>Who am I</h4>
+			<p>私たちはさまざまなアーティストやクリエイターの出会いのためのプラットホームです</p>
+　　　 <p>アイデアを形にする人たちのコミュニティやイベントなどの環境で感受性豊かな人同士が出会うことで<br>
+	　　　　違うアイデア、人脈、刺激をうけあい、新たな一歩を踏み出すきっかけを提供しています
+			</p>
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		$(function(){
+			$('header').hide().fadeIn(2500);
+
+			$('.top-mask').hide().fadeIn(5000);
+
+		});
+
+
+	</script>

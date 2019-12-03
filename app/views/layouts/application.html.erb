@@ -14,22 +14,11 @@
     <![endif]-->
   </head>
   <body>
-    <header >
-      <div class="container">
-        <p>Arc+</p>
-        <nav>
-          <ul id = "access" class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home",  root_path %></li>
-            <li><%= link_to "about",   homes_about_path %></li>
-            <li><%= link_to "event" , events_index_path %></li>
-            <li><%= link_to "sign_up",  new_user_path %></li>
-            <li><%= link_to "Log in", '#' %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-      <%= yield %>
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
 
   </body>
 </html>
