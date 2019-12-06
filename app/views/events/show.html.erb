@@ -1,0 +1,61 @@
+<body class="index">
+<header >
+  <div class="container">
+    <p>Arc+</p>
+    <nav>
+      <ul id = "access" class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",  root_path %></li>
+        <li><%= link_to "Vision",   homes_about_path %></li>
+        <li><%= link_to "Event" , events_index_path %></li>
+        <li><%= link_to "Sign_up",  new_user_path %></li>
+        <li><%= link_to "Login", login_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "logout",logout_path, method: :delete %>
+          </li>
+          <li>
+            <%= link_to user_path(current_user),	method: :get do %>
+              <%= image_tag "profile.png" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="event_wrapper">
+  <div class="container">
+    <div class="main_content">
+      <div class="event_title_wrap">
+        <h2 class="event_show_title">
+
+          <%= @event.title %>
+        </h2>
+        <% if @event.image %>
+          <div class="thumbnail" style="background-image: url(<%= @event.image %>)"></div>
+
+        <% end %>
+      </div>
+      <div class="event_detail_wrap">
+
+        <div class="event_detail_content">
+          <% if @event.site %>
+            <div class="event_detail_btn">
+              <%= link_to "詳細を確認する", @event.url%>
+            </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="side_content">
+
+
+      <% if @event.owner %>
+      <div class="event_owner_wrap">
+
+      </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</body>

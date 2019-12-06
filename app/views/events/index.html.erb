@@ -1,4 +1,4 @@
-<body>
+<body class="index">
   <header >
     <div class="container">
       <p>Arc+</p>
@@ -9,23 +9,55 @@
           <li><%= link_to "Event" , events_index_path %></li>
           <li><%= link_to "Sign_up",  new_user_path %></li>
           <li><%= link_to "Login", login_path %></li>
+          <% if logged_in? %>
+						<li><%= link_to "logout",logout_path, method: :delete %>
+						</li>
+						<li>
+				      <%= link_to user_path(current_user),	method: :get do %>
+				        <%= image_tag "profile.png" %>
+				      <% end %>
+				    </li>
+					<% end %>
         </ul>
       </nav>
     </div>
   </header>
-  <div class = event-index-wrapper>
-    <div class= event-index-container>
-      <h5>events</h5>
-      <div class=event-title>
-        <p>title</p>
-      </div>
-      <div class="event-detail">
-        ああああああああああああああ
-      </div>
-      <div class = "event-day">
-        xx月yy日
-      </div>
+  <div class="event_wrapper">
+    <div class="container">
+      <div class="main_content">
+        <div class="events">
+          <% last_date = nil  %>
+          <% @events.each do |event| %>
 
+
+            <div class="event">
+              <div class="event_image">
+                <%= link_to(event_path(event)) do %>
+                  <% if event.image  %>
+                    <%= image_tag event.image, width: "220px", height: "130xp"  %>
+                  <% elsif event.site %>
+                    <div class="site_logo">
+                      <% if event.site == "doorkeeper" %>
+                        <%= image_tag "doorkeeper.png", width: "140px", height: "30px" %>
+                      <% elsif event.site == "connpass" %>
+                        <%= image_tag("connpass.png", width: "120px", height: "40px") %>
+                      <% end %>
+                    </div>
+                  <% end %>
+                <% end %>
+              </div>
+              <div class="event_detail">
+                <%= link_to "#{event.title}",event_path(event), class: "event_title" %>
+
+                <div class="event_owner">
+                  <p><%= event.owner %></p>
+                </div>
+              </div>
+            </div>
+          <% end  %>
+        </div>
+        <div class="side_content">
+        </div>
+      </div>
     </div>
-  </div>
-</body
+</body>

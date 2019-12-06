@@ -9,6 +9,15 @@
         <li><%= link_to "Event", events_index_path %></li>
         <li><%= link_to "Sign_up",  new_user_path %></li>
         <li><%= link_to "Login", login_path%></li>
+        <% if logged_in? %>
+          <li><%= link_to "logout",logout_path, method: :delete %>
+          </li>
+          <li>
+            <%= link_to user_path(current_user),	method: :get do %>
+              <%= image_tag "profile.png" %>
+            <% end %>
+          </li>
+        <% end %>
       </ul>
     </nav>
   </div>
