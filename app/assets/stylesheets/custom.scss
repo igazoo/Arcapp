@@ -107,7 +107,7 @@ h3{
   width:600px;
   font-size:25px;
   font-size: 25px;
-  
+
   padding-top:50px;
   padding-bottom: 50px;
   padding-left: 150px;
@@ -136,4 +136,50 @@ h4{
   font-family: cursive;
   margin-bottom: 200px;
 
+}
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.text-white {
+  color: #000;
+}
+
+.btn-white {
+  color: #fff;
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: #000;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('bg-top.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-hero-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 60px;
+  }
 }

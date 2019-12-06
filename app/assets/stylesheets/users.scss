@@ -1,3 +1,93 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user_wrapper {
+  margin-bottom: 100px;
+  .container {
+    display: flex;
+  }
+}
+
+.user_status {
+  border: solid 1px #707070;
+  display: flex;
+  .status_content {
+    border-left: solid 1px #707070;
+    padding: 15px 5px;
+    width: 33%;
+  }
+  .user_name {
+    img {
+      border-radius: 25px;
+      margin-right: 5px;
+    }
+    p {
+      display: inline-block;
+      font-size: 18px;
+      width: 75%;
+      vertical-align: middle;
+
+    }
+    .user_events_count {
+      text-align: center;
+    }
+  }
+}
+
+// ユーザー詳細　サイドバー
+
+.user_profile {
+  border: solid 1px #707070;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  .user_profile_image {
+    margin: 20px auto;
+    width: 80px;
+    img {
+      border-radius: 40px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+
+.user_events_count, .user_level {
+  p {
+    text-align: center;
+    font-size: 18px;
+  }
+  .level {
+    line-height: 54px;
+  }
+}
+
+.user_portfolio_btn, .user_edit_btn {
+    display: inline-block;
+    background: #2689EB;
+    border-radius: 4px;
+    margin: 20px 0;
+    color: white;
+    padding: 10px;
+}
+
+.user_edit_btn {
+  background: #707070;
+}
+
+.icon_image{
+  width: 50px;
+  height: 50px;
+}
+
+.profile_icon_image{
+  width: 80px;
+  height: 80px;
+}
+
+.current_user_image{
+  width: 48px;
+  height: 48px;
+}

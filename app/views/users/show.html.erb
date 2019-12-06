@@ -1,0 +1,36 @@
+<header >
+  <div class="container">
+    <p>Arc+</p>
+    <nav>
+      <ul id = "access" class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home",  root_path %></li>
+        <li><%= link_to "Vision",   homes_about_path %></li>
+        <li><%= link_to "Event" , events_index_path %></li>
+        <li><%= link_to "Sign_up",  new_user_path %></li>
+        <li><%= link_to "Login", login_path  %></li>
+        <% if logged_in? %>
+          <li><%= link_to "logout",logout_path, method: :delete %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="user_wrapper">
+  <div class="container">
+    <div class="side_content">
+      <div class="user_profile">
+          <div class="user_profile_image">
+
+          </div>
+          <h3><%= @user.name %></h3>
+
+
+        
+        <div class="user_menu">
+
+        </div>
+      </div>
+    </div>
+</div>
+</div>

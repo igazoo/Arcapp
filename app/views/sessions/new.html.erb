@@ -1,0 +1,42 @@
+<body class="index">
+	<header >
+		<div class="container">
+			<p>Arc+</p>
+			<nav>
+				<ul id = "access" class="nav navbar-nav navbar-right">
+					<li><%= link_to "Home",  root_path %></li>
+					<li><%= link_to "Vision",   homes_about_path %></li>
+					<li><%= link_to "Event" , events_index_path %></li>
+					<li><%= link_to "Sign_up",  new_user_path %></li>
+          <li><%= link_to "Log_in", login_path %></li>
+
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+
+
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">Log in</h1>
+        <%= form_for :session, url: login_path do |f| %>
+          <div class="form-group">
+            <%= f.label :email, class: "text-white" %>
+            <%= f.text_field :email, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, class: "text-white" %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+
+          <%= f.submit "ログイン", class: "btn-block btn-white" %>
+          <%= link_to "新規登録はこちら",new_user_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
