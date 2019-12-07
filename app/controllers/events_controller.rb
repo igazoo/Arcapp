@@ -16,11 +16,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(status: :"published")
     @event = Event.new(event_params)
-
     if @event.save
-
       redirect_to @event
     else
       render :new
@@ -68,7 +65,7 @@ class EventsController < ApplicationController
 
   private
     def event_params
-      params.require(:event).permit(:title, :location,:description, :started_at, :ended_at,:status)
+      params.require(:event).permit(:title, :location,:description, :image)
     end
 
     def set_event

@@ -13,9 +13,11 @@
           <li><%= link_to "logout",logout_path, method: :delete %>
           </li>
           <li>
-            <%= link_to user_path(current_user),	method: :get do %>
-              <%= image_tag "profile.png" %>
-            <% end %>
+            <%= link_to	user_path(current_user) do %>
+              <img src=<%= current_user.image %> class="current_user_image" >
+              <p><%= current_user.name %></p>
+              <%end%>
+
           </li>
         <% end %>
       </ul>
@@ -41,10 +43,13 @@
         <%= form.label :location %>
         <%= form.text_field :location, placeholder: "会場", class: "form-control" %>
       </div>
-      
+
       <div class="form-group">
         <%= form.label :description %>
         <%= form.text_area :description, placeholder: "詳細", class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= form.label "画像をアップロード" %><br><%= form.file_field :image %>
       </div>
       <%= form.submit "イベント作成", class: "btn btn-info" %>
     <% end %>
