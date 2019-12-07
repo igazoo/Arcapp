@@ -1,0 +1,36 @@
+<body class="index">
+  <header >
+    <div class="container">
+      <p>Arc+</p>
+      <nav>
+        <ul id = "access" class="nav navbar-nav navbar-right">
+          <li><%= link_to "Home",  root_path %></li>
+          <li><%= link_to "Vision",   homes_about_path %></li>
+          <li><%= link_to "Event" , events_index_path %></li>
+          <li><%= link_to "Sign_up",  new_user_path %></li>
+          <li><%= link_to "Log in", login_path %></li>
+          <% if logged_in? %>
+            <li><%= link_to "logout",logout_path, method: :delete %>
+            </li>
+            <li>
+              <%= link_to	user_path(current_user) do %>
+                <img src=<%= current_user.image %> class="current_user_image" >
+                <p><%= current_user.name %></p>
+                <%end%>
+
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<p><%= "ルーム名：#{@room.name}" %></p>
+
+<input type="text" data-behavior="room_speaker" data-user="<%= current_user.id %>" data-room="<%= @room.id %>">
+
+<div id="posts">
+  <%= render "post", collection: @posts %>
+</div>
+
+</body>
