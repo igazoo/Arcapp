@@ -13,7 +13,11 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   resources :users
   resources :events
-  resources :rooms
+  resources :rooms do
+    member do
+      get "detail"
+    end
+  end
    mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
