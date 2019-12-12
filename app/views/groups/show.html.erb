@@ -177,7 +177,22 @@
         <div class="community_main_right">
           <div class="community_main_right_inner">
             <button class="community_main_enterButton" type="button" name="button">参加する</button>
-            <%=button_to "トークルームに参加する", room_path(@room),:method => :get %>
+          
+            <%= link_to "チャットルーム作成", new_room_path %>
+            <%= link_to "チャットルーム一覧", rooms_path %>
+
+            <% if current_user.groups_joining?(@group)%>
+            <%= form_for(current_user.user_groups.find_by(group_id: @group.id),
+             html: { method: :delete }) do |f| %>
+              <%= f.submit "退出",class: "btn" %>
+              <% end %>
+            <% else %>
+              <%=form_for(current_user.user_groups.build)do |f|%>
+                <div><%= hidden_field_tag :group_id, @group.id%></div>
+
+                <%=f.submit "参加する",class: "btn btn-primary"%>
+              <% end %>
+            <% end %>
             <div class="community_members">
               <h3>メンバー</h3>
               <div class="community_members_images">
