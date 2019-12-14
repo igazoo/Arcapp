@@ -1,9 +1,6 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// Place all the styles related to the groups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
@@ -290,4 +287,98 @@
   transform: translateY(3px);
 }
 
-/* 以下使用不可 */
+.communityList_wrapper {
+  width: 100vw;
+  margin-bottom: 50px;
+  display: flex;
+  .communityList_left {
+    width: 70vw;
+  }
+  .communityList_right {
+    width: 30vw;
+  }
+}
+
+.communityList_left {
+  text-align: center;
+  h2 {
+    margin: 16px auto 14px auto;
+    font-size: 32px;
+    // color: #707070;
+  }
+  .communityList_list {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    .communityList_list_item {
+      width: 20vw;
+      padding: 10px 0 10px;
+      margin: auto 1.5vw 20px 1.5vw;
+      text-align: left;
+      background-color: #F5F5F5;
+      img {
+        width: 18vw;
+        margin-left: 1vw;
+      }
+      .communityList_list_item_text {
+        width: 18vw;
+        margin-left: 1vw;
+        h3 {
+          margin: 4px auto 0 10px;
+          text-decoration-line: underline;
+        }
+        .communityList_list_item_tags {
+          display: flex;
+          flex-wrap: wrap;
+          a {
+            padding-right: 8px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 13px;
+            .material-icons {
+              font-size: 13px;
+              transform: translateY(2px);
+            }
+          }
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.communityList_right {
+  text-align: center;
+  .communityList_categories_wrapper {
+    width: 22vw;
+    padding-bottom: 1px;
+    margin-top: 78px;
+    background-color: #F5F5F5;
+    h3 {
+      padding-top: 10px;
+    }
+    .communityList_categories {
+      width: 20vw;
+      margin-left: 1vw;
+      background-color: #FFFFFF;
+      ul {
+        padding-left: 1.5vw;
+        list-style: none;
+        li {
+          margin-bottom: 3px;
+          text-align: left;
+          a {
+            text-decoration: none;
+            color: #000000;
+            .material-icons {
+              font-size: 16px;
+              transform: translateY(2px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
