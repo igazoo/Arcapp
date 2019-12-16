@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'groups/new'
-  get 'rooms/show'
-  get 'events/new'
-  get 'sessions/new'
   get 'homes/index'
   get 'homes/about'
-  get 'events/index'
+
   root 'homes#index'
 
   get    '/login',   to: 'sessions#new'
@@ -16,7 +12,7 @@ Rails.application.routes.draw do
   resources :events
   resources :rooms
 
-  
+
   resources :groups
   resources :user_groups,only: [:create, :destroy]
 

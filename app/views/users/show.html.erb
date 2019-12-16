@@ -1,28 +1,11 @@
-<header >
-  <div class="container">
-    <p>Arc+</p>
-    <nav>
-      <ul id = "access" class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",  root_path %></li>
-        <li><%= link_to "Vision",   homes_about_path %></li>
-        <li><%= link_to "Event" , events_index_path %></li>
-        <li><%= link_to "Sign_up",  new_user_path %></li>
-        <li><%= link_to "Login", login_path  %></li>
-        <% if logged_in? %>
-          <li><%= link_to "logout",logout_path, method: :delete %>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
-  </div>
-</header>
+
 <div class="user_wrapper">
   <div class="container">
     <div class="side_content">
       <div class="user_profile">
           <div class="user_profile_image">
             <div class="user_profile_image">
-              <img src=<%= @user.image%> class = "profile_icon_image">
+            
             </div>
 
           </div>
@@ -36,6 +19,6 @@
     <%=button_to "コミュニティ作成",new_group_path,:method => :get%>
     <%=button_to "コミュニティ一覧",groups_path , :method =>:get%>
     <%= link_to "イベント作成", new_event_path %>
-    
+
 </div>
 </div>
