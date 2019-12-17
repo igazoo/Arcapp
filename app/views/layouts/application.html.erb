@@ -14,13 +14,13 @@
     <![endif]-->
   </head>
   <body>
-    <header >
+    <header>
       <div class="container">
         <p>Arc+</p>
         <nav>
           <ul id = "access" class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",  root_path %></li>
-            <li><%= link_to "Vision",   homes_about_path %></li>
+            <li><%= link_to "Vision",  homes_about_path %></li>
             <li><%= link_to "Event" , events_path%></li>
             <li><%= link_to "Sign_up",  new_user_path %></li>
             <li><%= link_to "Login", login_path  %></li>
@@ -43,7 +43,7 @@
 
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-  <% end %>
+    <% end %>
 
     <%= yield %>
     <script>
