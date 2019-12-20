@@ -1,12 +1,25 @@
-body.about{
-  background-image: url("suisai.jpg") ;
-  background-size:contain;
-  opacity:0.8;
-}
+.about-wrapper{
 
-
-  header li{
-    border-radius: 30px 20px 20px 10px;
-    background-color: #fff;
-
+  h3{
+    text-align: center;
+    font-size: 90px;
+    font-family: cursive;
   }
+}
+  .about-container{
+    padding-top: 30px;
+    height: 500px;
+    background-image: url('fes.jpg');
+    background-size: cover;
+    height: 500px;
+  }
+
+
+
+
+
+.about2-container{
+  background-image: url('');
+  height: 400px;
+  background-size: contain;
+}

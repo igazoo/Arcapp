@@ -1,13 +1,4 @@
 
-    <div class="community_container">
-      <div class="community_profile_wrapper">
-        <div class="community_profile">
-
-          <div class="community_profile_text">
-
-          </div>
-        </div>
-      </div>
 
       <div class="community_main_wrapper">
         <div class="community_main_left">
@@ -15,12 +6,9 @@
           <div class="community_description">
             <h2>コミュニティの説明</h2>
             <div class="community_description_text">
-              <p>恵比寿地区で開催するJavaScript講座のグループです。<br><br>
-                検討中の講座リスト：<br><br>
-                Javascript基礎<br>
-                Node.js/Express基礎<br>
-                React基礎<br>
-                Redux基礎<br>
+              <p>Arc+<br><br>
+                音楽とアートのフェスティバル：<br>
+
               </p>
             </div>
           </div>
@@ -36,12 +24,12 @@
               </div>
               <div class="community_event_separator"></div>
               <div class="community_event_text">
-                <h2>Ruby on Rail勉強会</h2>
+                <h2>音楽とアートのフェスティバル」</h2>
                 <p class="community_event_description">Ruby使ってみんなでもくもく会</p>
                 <div class="community_event_info">
                   <p class="community_event_place"><i class="material-icons">room</i>GVH Osaka</p>
                   <img src="logo.png" alt="owner_img">
-                  <p class="community_event_organizer">株式会社 Gude</p>
+
                 </div>
                 <div class="community_event_time">
                   <p>2019年</p>
@@ -127,28 +115,29 @@
 
         <div class="community_main_right">
           <div class="community_main_right_inner">
-            <button class="community_main_enterButton" type="button" name="button">参加する</button>
-
-            <%= link_to "チャットルーム作成", new_room_path %>
-            <%= link_to "チャットルーム一覧", rooms_path %>
-
+            <button class="community_main_enterButton" type="button" name="button">
             <% if current_user.groups_joining?(@group)%>
             <%= form_for(current_user.user_groups.find_by(group_id: @group.id),
              html: { method: :delete }) do |f| %>
-              <%= f.submit "退出",class: "btn" %>
+              <%= f.submit "退出",class: "community_main_enterButton" %>
               <% end %>
             <% else %>
               <%=form_for(current_user.user_groups.build)do |f|%>
                 <div><%= hidden_field_tag :group_id, @group.id%></div>
 
-                <%=f.submit "参加する",class: "btn btn-primary"%>
+                <%=f.submit "参加する",class: "community_main_enterButton"%>
               <% end %>
             <% end %>
+
+            </button>
+            <%= link_to "チャットルーム作成", new_room_path %>
+            <%= link_to "チャットルーム一覧", rooms_path %>
+
+
             <div class="community_members">
               <h3>メンバー</h3>
+              <%= @users.count %>
             </div>
             </div>
           </div>
         </div>
-
-      </div>

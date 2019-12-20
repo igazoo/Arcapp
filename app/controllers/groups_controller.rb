@@ -6,6 +6,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
+    @users = @group.users
   end
 
   def new
@@ -14,7 +15,7 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    @group.owner = current_user#
+    @group.owner = current_user.id
     if @group.save
       flash[:success] = "コミュニティを作成しました"
       redirect_to groups_path

@@ -4,8 +4,10 @@
 
 /* universal */
 header{
-  height: 70px;
+  height: 90px;
   width: 100%;
+  background-color :#EEEEEE	;
+
 
   .container{
     margin-left: 30px;
@@ -22,62 +24,30 @@ header{
  nav{
    font-size: 25px;
    font-family: cursive;
+   display: block;
+   color: #000;
  }
- img{
-   width:60px;
-   height: 50px;
 
  }
- }
 }
-body.index{
-  background-image: url('');
-  background-size: cover;
-  animation: bgiLoop 90s linear infinite ;
-}
-@keyframes bgiLoop {
-    0% { background-position: 0 0;}
-  100% { background-position: -3000px 5000px;}
 
-}
+
 .top-page-wrapper{
-  height: 700px;
+  height: 550px;
   width:100%;
+  background-image: url('hosizara2.jpg');
+  background-size: cover;
+  padding-top: 50px;
 
 
 }
-
-
-
-
 .top-mask{
     h1{
       font-size: 220px;
       padding: 100px 300px 0 400px;
-      color: #FFCCFF;
-      background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      opacity: 0.9;
+      color: #fff;
       font-family: cursive;
-      animation: appeare 1s ease 3s 1 normal forwards running;
     }
-
-
-    h2{
-      font-size: 35px;
-      padding: 0 300px 0 700px;
-      color: #FFCCFF;
-      background: -webkit-linear-gradient(0deg, #40E0D0, #FFCCFF, #FFCCFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-      font-family: cursive;
-      }
-
-
-
-}
 h3{
   text-align: center;
   font-family: cursive;
@@ -85,7 +55,7 @@ h3{
   padding-top: 70px;
   margin: 0 auto;
   color: #000;
-
+}
 }
 
 
@@ -129,11 +99,7 @@ h3{
   text-align:center;
 }
 .midle-container{
-  p{
-    font-size: 20px;
-    margin-top: 50px;
 
-  }
 }
 
 h4{
