@@ -115,7 +115,7 @@
 
         <div class="community_main_right">
           <div class="community_main_right_inner">
-            <button class="community_main_enterButton" type="button" name="button">
+
             <% if current_user.groups_joining?(@group)%>
             <%= form_for(current_user.user_groups.find_by(group_id: @group.id),
              html: { method: :delete }) do |f| %>
@@ -129,9 +129,10 @@
               <% end %>
             <% end %>
 
-            </button>
+
             <%= link_to "チャットルーム作成", new_room_path %>
             <%= link_to "チャットルーム一覧", rooms_path %>
+            <%= button_to"コミュニティの編集", edit_group_path ,:method => :get %>
 
 
             <div class="community_members">

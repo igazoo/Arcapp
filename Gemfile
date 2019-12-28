@@ -65,3 +65,4 @@ gem "jquery-rails"
 gem 'bcrypt'
 gem 'carrierwave'
 gem 'execjs'
+gem 'google-api-client', '0.9.20', require: 'google/apis/youtube_v3'

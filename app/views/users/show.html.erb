@@ -9,7 +9,7 @@
             </div>
 
           </div>
-          <img src=<%= current_user.image %> class="current_user_image" >
+           <img class= "current_user_image" src=<%= current_user.image%>>
           <h3><%= @user.name %></h3>
 
         <div class="user_menu">
@@ -20,6 +20,7 @@
     <%=button_to "コミュニティ作成",new_group_path,:method => :get%>
     <%=button_to "コミュニティ一覧",groups_path , :method =>:get%>
     <%= link_to "イベント作成", new_event_path %>
+    <%=button_to "youtube動画を選ぶ", new_youtube_path, :method => :get %>
 
-</div>
+  </div>
 </div>

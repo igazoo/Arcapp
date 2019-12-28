@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
 
+
   def index
     @groups = Group.all
   end
@@ -23,13 +24,26 @@ class GroupsController < ApplicationController
       flash[:info]= "コミュニティを作成できませんでした"
       rtender :new
     end
+  end
 
     def edit
+      @group = Group.find(params[:id])
     end
-  end
+
+    def update
+      @group = Group.find(params[:id])
+      if @group.update_attributes(group_params)
+        flash[:success] = "変更しました"
+        redirect_to group_path
+        else
+        render 'edit'
+        end
+    end
+
+
   private
   def group_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name,:description)
   end
 
 
