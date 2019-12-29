@@ -20,14 +20,14 @@ class YoutubesController < ApplicationController
    service.list_searches(:snippet, opt)
  end
   def index
+    @youtubes = Youtube.all
 
-     @youtube_data = find_videos('初年間FP')
   end
 
   def show
     @youtube =Youtube.find(params[:id])
-    @c = "初年間FP"
-    @youtube_data = find_videos(@c)
+
+    @youtube_data = find_videos(@youtube.description)
   end
 
   def new

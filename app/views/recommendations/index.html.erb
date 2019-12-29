@@ -1,0 +1,19 @@
+
+<div class="recommendationList_wrapper">
+      <div class="recommendationList_left">
+        <h2>オススメ一覧</h2>
+        <% @recommendations.each do |recommendation| %>
+        <div class="recommendationList_list">
+          <div class="recommendationList_list_item">
+            <div class="recommendationList_list_item_text">
+              <h3><%=link_to recommendation.name, recommendation.url %></h3>
+
+              <p><% recommendation.description %></p>
+               <img src = <%=recommendation.image%>>
+            </div>
+          </div>
+
+        <% end %>
+        </div>
+      </div>
+    </div>

@@ -2,25 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.user-form-wrapper {
-  margin: 100px auto;
-}
-
-.registration-btn, .login-btn {
-  margin: 30px auto;
-}
-
-.registration-btn a, .login-btn a {
-  display: block;
-  width: 250px;
-  height: 50px;
-  margin: 0 auto;
-}
-
-.user-login-wrapper {
-  margin: 100px auto;
-  width: 800px;
-}
 
 // ゆーざー詳細画面
 
@@ -31,10 +12,8 @@
   }
 }
 
-.user_status {
-  border: solid 1px #707070;
-  display: flex;
-  .status_content {
+
+  .side_content {
     border-left: solid 1px #707070;
     padding: 15px 5px;
     width: 33%;
@@ -55,15 +34,15 @@
       text-align: center;
     }
   }
-}
+
 
 // ユーザー詳細　サイドバー
 
 .user_profile {
   border: solid 1px #707070;
-  width: 80%;
+  width: 150px;
   margin: 0 auto;
-  padding: 20px;
+
   text-align: center;
   .user_profile_image {
     margin: 20px auto;

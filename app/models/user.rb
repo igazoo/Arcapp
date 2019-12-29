@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :name, presence: true, length: { maximum: 50 }
-    VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-    validates :email, presence: true, length: { maximum: 255 },
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, length: { maximum: 255 },
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
 
@@ -22,7 +22,7 @@ class User < ApplicationRecord
   def groups_unjoin(group)
     user_groups.find_by(group_id: group.id).destroy
   end
-  
+
   def groups_joining?(group)
     groups.include?(group)
   end

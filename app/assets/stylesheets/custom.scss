@@ -26,16 +26,21 @@ header{
    font-family: cursive;
    display: block;
    color: #000;
+   .current_user_image{
+     width: 60px;
+     height: 60px;
+   }
  }
 
  }
 }
 
 
+
 .top-page-wrapper{
   height: 550px;
   width:100%;
-  background-image: url('hosizara2.jpg');
+
   background-size: cover;
   padding-top: 50px;
 

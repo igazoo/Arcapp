@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-
-
+  get 'recommendations/new'
   get 'homes/index'
   get 'homes/about'
 
@@ -13,7 +12,8 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :rooms
-  resources :youtubes 
+  resources :youtubes
+  resources :recommendations
 
 
   resources :groups

@@ -1,2 +1,0 @@
-class Youtube < ApplicationRecord
-end

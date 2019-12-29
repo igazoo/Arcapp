@@ -16,24 +16,19 @@
   <body>
     <header>
       <div class="container">
-        <p>Arc+</p>
+        <p>Collections+</p>
         <nav>
           <ul id = "access" class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",  root_path, :style=>"color:black;"  %></li>
-            <li><%= link_to "Vision",  homes_about_path, :style=>"color:black;"  %></li>
-            <li><%= link_to "youtube" , youtubes_path, :style=>"color:black;" %></li>
+
             <li><%= link_to "Sign_up",  new_user_path, :style=>"color:black;"  %></li>
             <li><%= link_to "Login", login_path, :style=>"color:black;"   %></li>
             <% if logged_in? %>
+              <li><%=link_to "recommendation", recommendations_path,:style=> "color:black;" %></li>
 
               <li><%= link_to "logout",logout_path, method: :delete ,:style => "color:black;"%>
-              </li>
-              <li>
-                <%= link_to	user_path(current_user) do %>
-                  <img src=<%= current_user.image %> class="current_user_image" >
-                  <p><%= current_user.name %></p>
-                  <%end%>
                 </li>
+
             <% end %>
           </ul>
 
