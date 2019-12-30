@@ -6,10 +6,11 @@
         <div class="recommendationList_list">
           <div class="recommendationList_list_item">
             <div class="recommendationList_list_item_text">
-              <h3><%=link_to recommendation.name, recommendation.url %></h3>
+              <h3><%= recommendation.name%></h3>
 
-              <p><% recommendation.description %></p>
-               <img src = <%=recommendation.image%>>
+              <p><%= recommendation.description %></p>
+              <img src=<%=recommendation.image%> class = "recommendation_image">
+              <p><%=link_to "詳細はこちら",recommendation.url%></p>
             </div>
           </div>
 

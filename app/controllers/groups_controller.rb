@@ -22,7 +22,7 @@ class GroupsController < ApplicationController
       redirect_to groups_path
     else
       flash[:info]= "コミュニティを作成できませんでした"
-      rtender :new
+      render :new
     end
   end
 

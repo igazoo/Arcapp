@@ -5,14 +5,15 @@ class UserGroupsController < ApplicationController
     group = Group.find(params[:group_id])
     current_user.groups_join(group)
     flash[:success]= "グループに参加しました"
-    redirect_to groups_path
+    redirect_to group_path(group)
   end
 
   def destroy
+
     group = UserGroup.find(params[:id]).group
     current_user.groups_unjoin(group)
     flash[:info]= "退出しました"
-    redirect_to groups_path
+    redirect_to group_path(group)
 
   end
 end

@@ -8,10 +8,7 @@
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
 
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+
   </head>
   <body>
     <header>
@@ -20,27 +17,26 @@
         <nav>
           <ul id = "access" class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",  root_path, :style=>"color:black;"  %></li>
-
             <li><%= link_to "Sign_up",  new_user_path, :style=>"color:black;"  %></li>
             <li><%= link_to "Login", login_path, :style=>"color:black;"   %></li>
             <% if logged_in? %>
               <li><%=link_to "recommendation", recommendations_path,:style=> "color:black;" %></li>
-
               <li><%= link_to "logout",logout_path, method: :delete ,:style => "color:black;"%>
-                </li>
+              </li>
 
-            <% end %>
+              <%= link_to user_path(current_user) do %>
+                <img src=<%= current_user.image %> class="current_user_image" >
+              <% end %>
+              <% end %>
           </ul>
-
         </nav>
       </div>
     </header>
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+      <% end %>
 
-    <% flash.each do |key, value| %>
-    <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-    <% end %>
-
-    <%= yield %>
+      <%= yield %>
     <script>
   $(function(){
     $(".alert").fadeOut(5000);

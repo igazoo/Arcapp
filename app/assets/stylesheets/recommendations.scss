@@ -26,13 +26,14 @@
   display: flex;
   flex-wrap: wrap;
   .recommendationList_list_item {
-    width: 18vw;
+    width: 25vw;
     padding: 10px 0 10px;
     margin: auto 1.5vw 20px 1.5vw;
     text-align: left;
     background-color: #F5F5F5;
     img {
-      width: 16vw;
+      width: 200px;
+      height: 300px;
       margin-left: 1vw;
     }
     .recommendationList_list_item_text {
@@ -63,4 +64,8 @@
     }
   }
 
+}
+.recommendation_image{
+  width: 300px;
+  height: 340px;
 }

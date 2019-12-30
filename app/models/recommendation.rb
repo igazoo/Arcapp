@@ -3,5 +3,5 @@ class Recommendation < ApplicationRecord
   validates :image, presence: true
   validates :url ,  presence: true
   validates :description,presence: true
-
+  mount_uploader :image, ImageUploader
 end

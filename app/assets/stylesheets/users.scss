@@ -17,12 +17,8 @@
     border-left: solid 1px #707070;
     padding: 15px 5px;
     width: 33%;
-  }
-  .user_name {
-    img {
-      border-radius: 25px;
-      margin-right: 5px;
-    }
+
+
     p {
       display: inline-block;
       font-size: 18px;
@@ -40,15 +36,17 @@
 
 .user_profile {
   border: solid 1px #707070;
-  width: 150px;
+  width: 200px;
   margin: 0 auto;
+  height: 200px;
 
   text-align: center;
   .user_profile_image {
     margin: 20px auto;
-    width: 80px;
+    width: 86px;
     img {
       border-radius: 40px;
+
     }
   }
   h3 {
@@ -56,10 +54,11 @@
   }
 }
 
+
 .user_events_count, .user_level {
   p {
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
   }
   .level {
     line-height: 54px;
@@ -90,6 +89,110 @@
 }
 
 .current_user_image{
-  width: 48px;
-  height: 48px;
+  width: 110px;
+  height: 110px;
+}
+
+.profile_button{
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 160px;
+ height: 160px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 400px;
+ top: 120px;
+}
+
+.profile_button:hover {
+ -webkit-transform: rotateY(360deg);
+ transform: rotateY(360deg);
+}
+
+.community_button{
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 160px;
+ height: 160px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 600px;
+ top: 120px;
+}
+.community_button:hover{
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+.community_index_button{
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 160px;
+ height: 160px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 800px;
+ top: 120px;
+}
+.community_index_button:hover{
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+.collection_button{
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 160px;
+ height: 160px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 500px;
+ top: 320px;
+}
+.collection_button:hover{
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+.collection_index_button{
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 160px;
+ height: 160px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 700px;
+ top: 320px;
+}
+.collection_index_button:hover{
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
