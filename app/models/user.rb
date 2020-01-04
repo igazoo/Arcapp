@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: { maximum: 10 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                       format: { with: VALID_EMAIL_REGEX },
@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :user_rooms
   has_many :rooms, through: :user_rooms
   has_many :posts
+  has_many :recommendations
 
   has_many :user_groups
   has_many :groups, through: :user_groups

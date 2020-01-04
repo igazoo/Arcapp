@@ -4,4 +4,5 @@ class Recommendation < ApplicationRecord
   validates :url ,  presence: true
   validates :description,presence: true
   mount_uploader :image, ImageUploader
+  has_many :users
 end

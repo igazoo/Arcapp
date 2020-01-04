@@ -7,8 +7,9 @@
 
 .user_wrapper {
   margin-bottom: 100px;
+
   .container {
-    display: flex;
+
   }
 }
 
@@ -17,6 +18,7 @@
     border-left: solid 1px #707070;
     padding: 15px 5px;
     width: 33%;
+
 
 
     p {
@@ -39,8 +41,30 @@
   width: 200px;
   margin: 0 auto;
   height: 200px;
+  display: inline-block;
+ text-decoration: none;
+ color: #668ad8;
+ width: 210px;
+ height: 210px;
+ line-height: 120px;
+ border-radius: 50%;
+ border: double 4px #668ad8;
+ text-align: center;
+ overflow: hidden;
+ transition: .6s;
+ position: absolute;
+ left: 580px;
+ top: 320px;
+}
 
-  text-align: center;
+.user_profile:hover {
+ -webkit-transform: rotateY(360deg);
+ transform: rotateY(360deg);
+}
+
+
+
+
   .user_profile_image {
     margin: 20px auto;
     width: 86px;
@@ -50,9 +74,9 @@
     }
   }
   h3 {
-    font-size: 24px;
+    font-size: 19px;
   }
-}
+
 
 
 .user_events_count, .user_level {
@@ -106,8 +130,8 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 400px;
- top: 120px;
+ left: 350px;
+ top: 270px;
 }
 
 .profile_button:hover {
@@ -149,8 +173,8 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 800px;
- top: 120px;
+ left: 850px;
+ top: 270px;
 }
 .community_index_button:hover{
   -webkit-transform: rotateY(360deg);
@@ -169,8 +193,8 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 500px;
- top: 320px;
+ left: 450px;
+ top: 520px;
 }
 .collection_button:hover{
   -webkit-transform: rotateY(360deg);
@@ -189,8 +213,8 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 700px;
- top: 320px;
+ left: 770px;
+ top: 520px;
 }
 .collection_index_button:hover{
   -webkit-transform: rotateY(360deg);
