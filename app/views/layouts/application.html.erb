@@ -29,12 +29,16 @@
               <% end %>
               <% end %>
           </ul>
+
         </nav>
       </div>
-    </header>
       <% flash.each do |key, value| %>
-      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+      <div class="alert alert-<%= key %>" role="alert">
+        <p><%= value %></p>
+      </div>
       <% end %>
+    </header>
+
 
       <%= yield %>
     <script>

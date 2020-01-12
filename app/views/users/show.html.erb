@@ -15,8 +15,8 @@
       </div>
     </div>
     <%=button_to "プロフィール編集",edit_user_path(current_user),:method =>:get,:class =>"profile_button" %>
-    <%=button_to "コミュニティ作成",new_group_path,:method => :get, :class => "community_button"%>
-    <%=button_to "コミュニティ一覧",groups_path , :method =>:get ,:class => "community_index_button"%>
+
+  
     <%=button_to " コレクション一覧",recommendations_path,:method =>:get,:class =>"collection_index_button"%>
     <%=button_to "コレクションの登録",new_recommendation_path,:method => :get,:class =>"collection_button" %>
   </div>

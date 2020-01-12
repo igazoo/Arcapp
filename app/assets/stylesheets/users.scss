@@ -6,33 +6,17 @@
 // ゆーざー詳細画面
 
 .user_wrapper {
-  margin-bottom: 100px;
 
+  background-image: url('objects.jpg');
+  width:100vw;
+  height: 558px;
+  overflow: scroll;
+  background-size: auto;
+  margin: 0 auto;
   .container {
 
   }
 }
-
-
-  .side_content {
-    border-left: solid 1px #707070;
-    padding: 15px 5px;
-    width: 33%;
-
-
-
-    p {
-      display: inline-block;
-      font-size: 18px;
-      width: 75%;
-      vertical-align: middle;
-
-    }
-    .user_events_count {
-      text-align: center;
-    }
-  }
-
 
 // ユーザー詳細　サイドバー
 
@@ -43,18 +27,18 @@
   height: 200px;
   display: inline-block;
  text-decoration: none;
- color: #668ad8;
+ color: #000;
  width: 210px;
  height: 210px;
  line-height: 120px;
  border-radius: 50%;
- border: double 4px #668ad8;
+ border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 580px;
- top: 320px;
+ left: 550px;
+ top: 100px;
 }
 
 .user_profile:hover {
@@ -120,18 +104,18 @@
 .profile_button{
   display: inline-block;
  text-decoration: none;
- color: #668ad8;
+ color: #000;
  width: 160px;
  height: 160px;
  line-height: 120px;
  border-radius: 50%;
- border: double 4px #668ad8;
+ border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
  position: absolute;
  left: 350px;
- top: 270px;
+ top: 370px;
 }
 
 .profile_button:hover {
@@ -176,25 +160,25 @@
  left: 850px;
  top: 270px;
 }
-.community_index_button:hover{
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
+//.community_index_button:hover{
+  //-webkit-transform: rotateY(360deg);
+  //transform: rotateY(360deg);
+//}
 .collection_button{
   display: inline-block;
  text-decoration: none;
- color: #668ad8;
+ color: #000;
  width: 160px;
  height: 160px;
  line-height: 120px;
  border-radius: 50%;
- border: double 4px #668ad8;
+ border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 450px;
- top: 520px;
+ left: 580px;
+ top: 370px;
 }
 .collection_button:hover{
   -webkit-transform: rotateY(360deg);
@@ -203,18 +187,18 @@
 .collection_index_button{
   display: inline-block;
  text-decoration: none;
- color: #668ad8;
+ color: #000;
  width: 160px;
  height: 160px;
  line-height: 120px;
  border-radius: 50%;
- border: double 4px #668ad8;
+ border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 770px;
- top: 520px;
+ left: 810px;
+ top: 370px;
 }
 .collection_index_button:hover{
   -webkit-transform: rotateY(360deg);
