@@ -25,14 +25,16 @@
   width: 65vw;
   display: flex;
   flex-wrap: wrap;
+  float: left;
   .recommendationList_list_item {
     width: 25vw;
     padding: 10px 0 10px;
     margin: auto 1.5vw 20px 1.5vw;
     text-align: left;
     background-color: #F5F5F5;
+    float: left;
     img {
-      width: 200px;
+      width: 250px;
       height: 300px;
       margin-left: 1vw;
     }

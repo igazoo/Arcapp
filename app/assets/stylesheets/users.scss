@@ -9,9 +9,9 @@
 
   background-image: url('objects.jpg');
   width:100vw;
-  height: 558px;
+  height: 612px;
   overflow: scroll;
-  background-size: auto;
+  background-size: cover;
   margin: 0 auto;
   .container {
 
@@ -21,6 +21,7 @@
 // ユーザー詳細　サイドバー
 
 .user_profile {
+  text-align:center;
   border: solid 1px #707070;
   width: 200px;
   margin: 0 auto;
@@ -37,8 +38,9 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 550px;
+ left: 600px;
  top: 100px;
+ background-color: #fff;
 }
 
 .user_profile:hover {
@@ -114,13 +116,15 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 350px;
+ left: 400px;
  top: 370px;
+  background-color:rgba(255,255,255,0.8);
 }
 
 .profile_button:hover {
  -webkit-transform: rotateY(360deg);
  transform: rotateY(360deg);
+ background-color:#C2EEFF	;
 }
 
 .community_button{
@@ -159,6 +163,7 @@
  position: absolute;
  left: 850px;
  top: 270px;
+  background-color:rgba(255,255,255,0.8);
 }
 //.community_index_button:hover{
   //-webkit-transform: rotateY(360deg);
@@ -177,12 +182,14 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 580px;
+ left: 622px;
  top: 370px;
+  background-color:rgba(255,255,255,0.8);
 }
 .collection_button:hover{
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
+  background-color:#C2EEFF	;
 }
 .collection_index_button{
   display: inline-block;
@@ -197,10 +204,26 @@
  overflow: hidden;
  transition: .6s;
  position: absolute;
- left: 810px;
+ left: 832px;
  top: 370px;
+ background-color:rgba(255,255,255,0.8);
 }
 .collection_index_button:hover{
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
+  background-color: #C2EEFF;
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
 }
