@@ -7,8 +7,6 @@
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application',
                                'data-turbolinks-track': 'reload' %>
-
-
   </head>
   <body>
     <header>
@@ -38,14 +36,12 @@
       </div>
       <% end %>
     </header>
-
-
       <%= yield %>
     <script>
-  $(function(){
-    $(".alert").fadeOut(5000);
-  });
-</script>
+      $(function(){
+        $(".alert").fadeOut(5000);
+      });
+    </script>
 
   </body>
 </html>

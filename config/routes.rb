@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   resources :events
   resources :rooms
   resources :youtubes
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
 
   resources :groups
   resources :user_groups,only: [:create, :destroy]
+  resources :relationships,       only: [:create, :destroy]
 
 
    mount ActionCable.server => '/cable'

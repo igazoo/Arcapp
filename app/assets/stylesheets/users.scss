@@ -4,12 +4,18 @@
 
 
 // ゆーざー詳細画面
+@media screen and (max-width: 100vw) {
 
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;
+}
 .user_wrapper {
 
   background-image: url('objects.jpg');
   width:100vw;
-  height: 612px;
+  height: 700px;
   overflow: scroll;
   background-size: cover;
   margin: 0 auto;
@@ -19,211 +25,157 @@
 }
 
 // ユーザー詳細　サイドバー
-
+.side_content{
+  text-align: center;
+  margin-top: 100px;
+}
 .user_profile {
   text-align:center;
   border: solid 1px #707070;
   width: 200px;
   margin: 0 auto;
   height: 200px;
-  display: inline-block;
- text-decoration: none;
- color: #000;
- width: 210px;
- height: 210px;
- line-height: 120px;
- border-radius: 50%;
- border: double 4px #C0C0C0;
- text-align: center;
- overflow: hidden;
- transition: .6s;
- position: absolute;
- left: 600px;
- top: 100px;
- background-color: #fff;
+  color: #000;
+  width: 210px;
+  height: 210px;
+  line-height: 120px;
+  position: relative;
+  border-radius: 10%;
+  border: double 4px #C0C0C0;
+  text-align: center;
+  overflow: hidden;
+  transition: .6s;
+  margin-top: 30px;
+
+  background-color:rgba(255,255,255,0.5);
+
 }
 
 .user_profile:hover {
  -webkit-transform: rotateY(360deg);
  transform: rotateY(360deg);
+ background-color: #fff;
 }
 
-
-
-
-  .user_profile_image {
-    margin: 20px auto;
-    width: 86px;
-    img {
-      border-radius: 40px;
-
-    }
+.user_profile_image{
+  margin-top: 20px;
+  img{
+    border-radius: 50%;
   }
-  h3 {
-    font-size: 19px;
-  }
-
-
-
-.user_events_count, .user_level {
-  p {
-    text-align: center;
-    font-size: 30px;
-  }
-  .level {
-    line-height: 54px;
-  }
-}
-
-.user_portfolio_btn, .user_edit_btn {
-    display: inline-block;
-    background: #2689EB;
-    border-radius: 4px;
-    margin: 20px 0;
-    color: white;
-    padding: 10px;
-}
-
-.user_edit_btn {
-  background: #707070;
-}
-
-.icon_image{
-  width: 50px;
-  height: 50px;
-}
-
-.profile_icon_image{
-  width: 80px;
-  height: 80px;
 }
 
 .current_user_image{
   width: 110px;
   height: 110px;
+
 }
 
 .profile_button{
-  display: inline-block;
- text-decoration: none;
+
  color: #000;
  width: 160px;
- height: 160px;
+ height: 120px;
  line-height: 120px;
- border-radius: 50%;
+ border-radius: 10%;
  border: double 4px #C0C0C0;
- text-align: center;
  overflow: hidden;
  transition: .6s;
- position: absolute;
- left: 400px;
- top: 370px;
+ margin-top: 50px;
+
+
   background-color:rgba(255,255,255,0.8);
 }
 
 .profile_button:hover {
  -webkit-transform: rotateY(360deg);
  transform: rotateY(360deg);
- background-color:#C2EEFF	;
+ background-color:#fff	;
 }
 
-.community_button{
-  display: inline-block;
- text-decoration: none;
- color: #668ad8;
- width: 160px;
- height: 160px;
- line-height: 120px;
- border-radius: 50%;
- border: double 4px #668ad8;
- text-align: center;
- overflow: hidden;
- transition: .6s;
- position: absolute;
- left: 600px;
- top: 120px;
-}
-.community_button:hover{
-  -webkit-transform: rotateY(360deg);
-  transform: rotateY(360deg);
-}
 
-.community_index_button{
-  display: inline-block;
- text-decoration: none;
- color: #668ad8;
- width: 160px;
- height: 160px;
- line-height: 120px;
- border-radius: 50%;
- border: double 4px #668ad8;
- text-align: center;
- overflow: hidden;
- transition: .6s;
- position: absolute;
- left: 850px;
- top: 270px;
-  background-color:rgba(255,255,255,0.8);
-}
 //.community_index_button:hover{
   //-webkit-transform: rotateY(360deg);
   //transform: rotateY(360deg);
 //}
 .collection_button{
-  display: inline-block;
- text-decoration: none;
+
  color: #000;
  width: 160px;
- height: 160px;
+ height: 120px;
  line-height: 120px;
- border-radius: 50%;
+ border-radius: 10%;
  border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
- position: absolute;
- left: 622px;
- top: 370px;
+ margin-top : 50px;
+
+
   background-color:rgba(255,255,255,0.8);
 }
 .collection_button:hover{
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
-  background-color:#C2EEFF	;
+  background-color:#fff	;
 }
 .collection_index_button{
-  display: inline-block;
- text-decoration: none;
+
  color: #000;
  width: 160px;
- height: 160px;
+ height: 120px;
  line-height: 120px;
- border-radius: 50%;
+ border-radius: 10%;
  border: double 4px #C0C0C0;
  text-align: center;
  overflow: hidden;
  transition: .6s;
- position: absolute;
- left: 832px;
- top: 370px;
+
+ margin-top: 50px;
+
  background-color:rgba(255,255,255,0.8);
 }
 .collection_index_button:hover{
   -webkit-transform: rotateY(360deg);
   transform: rotateY(360deg);
-  background-color: #C2EEFF;
+  background-color: #fff;
 }
-
-.checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
-  span {
-    margin-left: 20px;
-    font-weight: normal;
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid ;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
   }
 }
 
-#session_remember_me {
-  width: auto;
-  margin-left: 0;
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+
 }
