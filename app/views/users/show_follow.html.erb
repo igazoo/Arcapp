@@ -1,30 +1,10 @@
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
+<% @user.following.each do |user| %>
+<table>
+<tr>
+  <td><img src=  <%=user.image %>><td>
+  <td>  <%= user.name %> </td>
+  <td><%= link_to '詳細', user_path(user) %></td>
+</tr>
 
-      <h1><%= @user.name %></h1>
-      <span><%= link_to "view my profile", @user %></span>
-
-    </section>
-    <section class="stats">
-
-      <% if @users.any? %>
-        <div class="user_avatars">
-          <% @users.each do |user| %>
-            <img src=<%=user.image %>>
-            <%=link_to  user.name,user_path(user) %>
-          <% end %>
-        </div>
-      <% end %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
-    <% if @users.any? %>
-      <ul class="users follow">
-
-      </ul>
-
-    <% end %>
-  </div>
-</div>
+</table>
+<% end %>

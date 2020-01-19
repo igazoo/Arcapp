@@ -13,7 +13,7 @@ width /***/:auto;
 }
 .user_wrapper {
 
-  background-image: url('objects.jpg');
+  background-image: url('library.jpg');
   width:100vw;
   height: 700px;
   overflow: scroll;
@@ -175,6 +175,15 @@ width /***/:auto;
 
 .users.follow {
   padding: 0;
+}
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid ;
+  }
 }
 
 

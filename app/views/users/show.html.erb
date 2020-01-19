@@ -26,9 +26,8 @@
   </div>
 </div>
 
-<%= link_to  "ユーザー一覧",users_path %>
 <section class="stats">
       <%= render 'stats' %>
-    </section>
+</section>
 
-  
+<%= render 'follow_form' if logged_in? %>
