@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 # リレーションシップ
-10.times do |n|
+70.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"
@@ -14,7 +14,7 @@
                email: email,
                password:              password,
                password_confirmation: password,
-             )
+               admin: true )
 end
 
 users = User.all

@@ -83,6 +83,7 @@ width /***/:auto;
   text-align: center;
   h1{
     margin: 0;
+    padding-top: 20px;
   }
 
 }
@@ -101,31 +102,25 @@ width /***/:auto;
     float: left;
     font-weight: bold;
     border: solid 5px gray;
-    margin: 60px;
-   font-size:21px;
+    margin: 30px;
+    font-size:21px;
     padding: 20px;
     border-radius: 10%;
+    background-color:	rgba(160,160,160,0.9);
 
   }
 
 }
-
-
-
-
 
 .user_detail_container{
     max-width: 500px;
     margin: 0 auto;
     box-shadow: 0 0 40px rgba(0,0,0, .3);
     margin-top : 60px;
-
-
     h1{
       padding: 30px;
-
+      text-align: center;
     }
-
 }
 
 
@@ -134,11 +129,9 @@ width /***/:auto;
 }
 .description img{
     float: left;
-    margin: 0 10px 10px 20px;
+    margin: 0 10px 40px 20px;
     height: 150px;
-    width: 150px;
-
-
+    width: 160px;
     transition-property: opacity;
     transition-duration: 1s;
     transition-timing-function: ease;
@@ -147,17 +140,12 @@ width /***/:auto;
 .description img:hover{
     opacity: 0.5;
 }
-.information h1{
+.information .type{
     font-size: 18px;
-    margin: 0 10px 10px 40px;
+    margin: 0 10px 10px 0;
     float: left;
     position:relative;
-    padding-top: 3px;
-    padding-right :10px;
-    padding-bottom: 10px;
-
-}
-.information .type {
+    margin-left: 30px;
     background-color: #000066;
     display: inline;
     padding: 5px 5px;
@@ -165,12 +153,15 @@ width /***/:auto;
     color: #fff;
 
 }
+.information p{
+  padding-top: 3px;
+}
 .content{
     background-color: #fff;
     padding: 20px;
 }
 .details{
-    margin: 0 0 20px;
+    margin: 20px;
 }
 .details h2{
     clear: left;
@@ -223,9 +214,40 @@ a{
     p{
       font-size: 21px;
       font-weight: bold;
+
     }
   }
 
+}
+.search_form{
+  margin-top: 20px;
+  width: 220px;
+  height: 40px;
+  border-radius: 10%;
+}
+.search_btn{
+
+  height: 40px;
+  width: 70px;
+  border-radius: 20%;
+}
+.search_btn:hover{
+  background-color:#88FFFF;
+}
+
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
 }

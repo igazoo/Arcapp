@@ -8,28 +8,23 @@ class User < ApplicationRecord
                       uniqueness: { case_sensitive: false }
 
   has_secure_password
+
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   mount_uploader :image, ImageUploader
-  has_many :user_rooms
-  has_many :rooms, through: :user_rooms
-  has_many :posts
+
   has_many :recommendations
-  
+  has_many :favorites
+  has_many :favorite_recommendation, through: :favorites, source: 'recommendation'
+  def self.search(search) #ここでのself.はUser.を意味する
+    if search
+      where(['name LIKE ?', "%#{search}%"]) #検索とnameの部分一致を表示。User.は省略
+    else
+      all #全て表示。User.は省略
+    end
+  end
 
   has_many :user_groups
   has_many :groups, through: :user_groups
-
-  def groups_join(group)
-    groups << group
-  end
-
-  def groups_unjoin(group)
-    user_groups.find_by(group_id: group.id).destroy
-  end
-
-  def groups_joining?(group)
-    groups.include?(group)
-  end
 
   # 渡された文字列のハッシュ値を返す
   def User.digest(string)

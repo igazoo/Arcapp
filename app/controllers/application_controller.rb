@@ -4,5 +4,14 @@ class ApplicationController < ActionController::Base
   add_flash_types :success, :info, :warning, :danger
   include SessionsHelper
 
+  #ユーザーのログインを確認する
+  def logged_in_user
+     unless logged_in?
+       store_location
+       flash[:danger] = "Please log in."
+       redirect_to login_url
+     end
+   end
+
 
 end

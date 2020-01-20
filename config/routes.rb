@@ -12,19 +12,17 @@ Rails.application.routes.draw do
   resources :users do
     member do
       get :following, :followers
+      get :recommendation_show
     end
   end
-  resources :events
-  resources :rooms
-  resources :youtubes
+
   resources :recommendations
 
-
+  get 'favorites/index'
+  post '/favorites', to: 'favorites#create'
+  delete '/favorites', to: 'favorites#destroy'
   resources :groups
   resources :user_groups,only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 
-
-   mount ActionCable.server => '/cable'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

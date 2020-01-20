@@ -1,0 +1,39 @@
+
+<div class="recommendation_wrapper">
+  <h1>オススメ一覧</h1>
+  
+  <% @recommendations.each do |recommendation| %>
+  <div class="recommendation_container"　`**clearfix**`>
+      <header>
+          <h1><%=recommendation.name%></h1>
+      </header>
+      <div class="recommendation_content">
+          <section class="information" >
+              <p class="type">オススメ</p>
+              <div class="description" >
+                  <a href='<%=recommendation.url%>'><img src='<%=recommendation.image%>' ></a>
+                  <h2 >紹介文</h2>
+                   <p class="under"><%=recommendation.description %></p>
+              </div>
+          </section>
+          <div class="recommendation-index-single">
+            <% if recommendation.favorite_users.include?(current_user) %>
+              <%=link_to  favorites_path(recommendation_id: recommendation.id),method: :delete do %>
+                <p><%= image_tag 'heart-red0.png', class: 'recommendation-index-icon' %></p>
+                <p><%=recommendation.favorite_users.count%></p>
+              <% end %>
+            <% else %>
+              <%=link_to favorites_path(recommendation_id: recommendation.id),method: :post do %>
+                <p><%= image_tag 'heart-black0.png', class: 'recommendation-index-icon' %></p>
+            <%end%>
+
+          <% end %>
+            <p><%=link_to "詳細はこちら",recommendation.url,:style=>"color:black"%></p>
+          <% if current_user.id == @user.id %>
+          <p><%= link_to "削除",recommendation_path(recommendation.id),:controller=> 'recommendations', :action=> 'destroy', method: :delete ,:style => "color:black;"%></p>
+          <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
