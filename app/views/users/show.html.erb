@@ -1,33 +1,27 @@
-
 <div class="user_wrapper">
-  <div class="user_container">
-    <div class="side_content">
-      <div class="user_profile">
+    <div class="user_detail_container">
+      <header>
+          <h1>プロフィール</h1>
+      </header>
+      <div class="content">
+          <section class="information">
+              <h1><%=@user.name%></h1>
+              <p class="type">Name</p>
+              <div class="description">
 
-          <div class="user_profile_image">
-            <img class= "current_user_image" src=<%= @user.image%>>
-            <h3><%= @user.name %></h3>
-          </div>
+                  <a href="#"><img src=<%=@user.image%> alt="プロフィール画像"></a>
+                  <p class="stats"> <%= render 'stats' %></p>
+                  <p><%= render 'follow_form' if logged_in? %></p>
+              </div>
+          </section>
 
-      </div>
-
-      <div class="row">
-        <div class="col-md-offset-2 col-md-3">
-          <%=button_to "プロフィール編集",edit_user_path(current_user),:method =>:get,:class=>"profile_button" %>
+          <section class="details">
+              <h2>詳細</h2>
+              <ul class="clearfix">
+                <li><%=link_to "プロフィール編集",edit_user_path(current_user),:method =>:get%></li>
+                <li><%=link_to "コレクション一覧",recommendations_path,:method =>:get%></li>
+                <li><%=link_to "コレクションの登録",new_recommendation_path,:method => :get %></li>
+              </ul>
+          </section>
         </div>
-        <div class="col-md-2">
-          <%=button_to " コレクション一覧",recommendations_path,:method =>:get,:class=>"collection_button"%>
-       </div>
-
-      <div class="col-md-3">
-        <%=button_to "コレクションの登録",new_recommendation_path,:method => :get,:class=>"collection_index_button"%>
-      </div>
-    </div>
   </div>
-</div>
-
-<section class="stats">
-      <%= render 'stats' %>
-</section>
-
-<%= render 'follow_form' if logged_in? %>
