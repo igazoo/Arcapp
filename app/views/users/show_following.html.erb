@@ -1,16 +1,14 @@
 <div class="show_follow_wrapper">
   <div class="follow_container">
     <h1>Following</h1>
-    
-      <%= will_paginate %>
+    <%= will_paginate %>
     <div class="index_content">
       <% @users.each do |user| %>
       <p>
         <img src=  <%=user.image %>>
         <%=link_to user.name,user_path(user),:style=>"color:black" %>
-
       </p>
       <% end %>
+    </div>
   </div>
-
-<div>
+</div>

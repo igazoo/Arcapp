@@ -1,31 +1,27 @@
-  <div class="recommendations-new-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-4 col-md-4 recommendations-new-container">
-          <h1 class="text-center text-white">オススメを登録</h1>
-          <%= form_for @recommendation do |f| %>
-            <div class ="form-group">
-              <%=f.label :name,'題名',class: "text-white"%>
-              <%=f.text_field :name, class: "form-control"%>
-            </div>
-
-            <div class="form-group">
-              <%= f.label :url, class: 'text-white' %>
-              <%= f.text_field :url, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :description,'詳細（96文字以内）', class: 'text-white' %>
-              <%= f.text_area :description, class: 'form-control' %>
-            </div>
-
-            <div class="form-group">
-              <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
-            </div>
-
-            <%= f.submit "登録", class: 'btn-block btn-white' %>
-          <% end %>
-
+<div class="recommendations-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 recommendations-new-container">
+        <h1 class="text-center text-white">オススメを登録</h1>
+        <%= form_for @recommendation do |f| %>
+        <div class ="form-group">
+          <%=f.label :name,'題名',class: "text-white"%>
+          <%=f.text_field :name, class: "form-control"%>
         </div>
+        <div class="form-group">
+          <%= f.label :url, class: 'text-white' %>
+          <%= f.text_field :url, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description,'詳細（96文字以内）', class: 'text-white' %>
+          <%= f.text_area :description, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
+        </div>
+        <%= f.submit "登録", class: 'btn-block btn-white' %>
+        <% end %>
       </div>
     </div>
   </div>
+</div>

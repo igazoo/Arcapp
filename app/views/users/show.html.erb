@@ -1,34 +1,34 @@
 <div class="user_wrapper">
-    <div class="user_detail_container">
-      <header>
-          <h1>プロフィール</h1>
-      </header>
-      <div class="content">
-          <section class="information">
-            <h1 class="type">Name</h1>
-              <p><%=@user.name%></p>
+  <div class="user_detail_container">
+    <header>
+      <h1>プロフィール</h1>
+    </header>
+    <div class="content">
+      <section class="information">
+        <h1 class="type">Name</h1>
+        <p><%=@user.name%></p>
 
-              <div class="description">
+        <div class="description">
 
-                  <a href="#"><img src=<%=@user.image%> alt="プロフィール画像"></a>
-                  <p class="stats"> <%= render 'stats' %></p>
-                  <p><%= render 'follow_form' if logged_in? %></p>
-              </div>
-              <% if current_user.admin? && !(current_user == @user) %>
-|              <p><%= link_to "削除する", @user, method: :delete,data: { confirm: "本当に削除しますか？" } %></p>
-              <% end %>
-          </section>
-
-          <section class="details">
-              <h2>詳細</h2>
-              <ul class="clearfix">
-                <% if current_user.id == @user.id %>
-                <li><%=link_to "プロフィール編集",edit_user_path(current_user),:method =>:get%></li>
-                <li><%=link_to "コレクションの登録",new_recommendation_path,:method => :get %></li>
-                <% end %>
-                <li><%=link_to "コレクション一覧",recommendation_show_user_path(@user),:method =>:get%></li>
-
-              </ul>
-          </section>
+          <a href="#"><img src=<%=@user.image%> alt="プロフィール画像"></a>
+          <p class="stats"> <%= render 'stats' %></p>
+          <p><%= render 'follow_form' if logged_in? %></p>
         </div>
+        <% if current_user.admin? && !(current_user == @user) %>
+        |              <p><%= link_to "削除する", @user, method: :delete,data: { confirm: "本当に削除しますか？" } %></p>
+        <% end %>
+      </section>
+
+      <section class="details">
+        <h2>詳細</h2>
+        <ul class="clearfix">
+          <% if current_user.id == @user.id %>
+          <li><%=link_to "プロフィール編集",edit_user_path(current_user),:method =>:get%></li>
+          <li><%=link_to "コレクションの登録",new_recommendation_path,:method => :get %></li>
+          <% end %>
+          <li><%=link_to "コレクション一覧",recommendation_show_user_path(@user),:method =>:get%></li>
+
+        </ul>
+      </section>
+    </div>
   </div>

@@ -6,8 +6,9 @@
       <% @users.each do |user| %>
       <p>
         <img src=  <%=user.image %>>
-         <%=link_to user.name,user_path(user),:style=>"color:black" %>
+        <%=link_to user.name,user_path(user),:style=>"color:black" %>
       </p>
       <% end %>
+    </div>
   </div>
-<div>
+</div>

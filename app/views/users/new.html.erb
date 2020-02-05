@@ -1,36 +1,34 @@
-
-
-  <div class="users-new-wrapper">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-offset-4 col-md-4 users-new-container">
-          <h1 class="text-center text-white">Sign in</h1>
-          <%= form_for @user do |f| %>
-            <div class="form-group">
-              <%= f.label :name ,"名前（１０文字以内）",class: 'text-white' %>
-              <%= f.text_field :name, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :email,'メールアドレス', class: 'text-white' %>
-              <%= f.text_field :email, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password, 'パスワード',class: 'text-white' %>
-              <%= f.password_field :password, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password_confirmation,'パスワード確認', class: 'text-white' %>
-              <%= f.password_field :password_confirmation, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
-
-            </div>
-
-            <%= f.submit "登録", class: 'btn-block' %>
-          <% end %>
-          <%= link_to 'ログインはこちら', login_path,class: 'text-white' %>
+<div class="users-new-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4 users-new-container">
+        <h1 class="text-center text-white">Sign in</h1>
+        <%= form_for @user do |f| %>
+        <div class="form-group">
+          <%= f.label :name ,"名前（１０文字以内）",class: 'text-white' %>
+          <%= f.text_field :name, class: 'form-control' %>
         </div>
+        <div class="form-group">
+          <%= f.label :email,'メールアドレス', class: 'text-white' %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password, 'パスワード',class: 'text-white' %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation,'パスワード確認', class: 'text-white' %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label "画像をアップロード" %><br><%= f.file_field :image %>
+
+        </div>
+
+        <%= f.submit "登録", class: 'btn-block' %>
+        <% end %>
+        <%= link_to 'ログインはこちら', login_path,class: 'text-white' %>
       </div>
     </div>
   </div>
+</div>

@@ -19,13 +19,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_153259) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "owner"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "description"
-  end
+
 
   create_table "recommendations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "url", limit: 4294967295
@@ -47,15 +41,7 @@ ActiveRecord::Schema.define(version: 2020_01_20_153259) do
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
   end
 
-  create_table "user_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "group_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_user_groups_on_group_id"
-    t.index ["user_id", "group_id"], name: "index_user_groups_on_user_id_and_group_id", unique: true
-    t.index ["user_id"], name: "index_user_groups_on_user_id"
-  end
+
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
@@ -68,10 +54,6 @@ ActiveRecord::Schema.define(version: 2020_01_20_153259) do
     t.boolean "admin", default: false
   end
 
-  create_table "youtubes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+  
 
 end

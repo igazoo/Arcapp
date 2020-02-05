@@ -12,12 +12,10 @@
             <%= f.label :password,'パスワード', class: "text-white" %>
             <%= f.password_field :password, class: "form-control" %>
           </div>
-
           <%= f.label :remember_me, class: "checkbox inline" do %>
             <%= f.check_box :remember_me %>
             <span>ログイン状態を保持する</span>
           <% end %>
-
           <%= f.submit "ログイン", class: "btn-block btn-white" %>
           <%= link_to "新規登録はこちら",new_user_path %>
         <% end %>
